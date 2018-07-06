@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary2">#a1b7ec</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark2">#a1b7ec</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="yellow">#fff6b7</color>
+    <color name="pink">#f2a6b4</color>
+    <color name="purple">#a1b7ec</color>
+    <color name="gray">#cdcdcd</color>
+    <color name="transBg">#88000000</color>
+
+    <color name="bg_swipe_item_neutral">#ffffffff</color>
+
+    <color name="ic_eat">#ffb876</color>
+    <color name="ic_hung">#d4eeff</color>
+    <color name="ic_cloth">#ffe9d4</color>
+    <color name="ic_play">#ef767a</color>
+    <color name="ic_education">#40c0cb</color>
+    <color name="ic_general">#b4c3ff</color>
+</resources>

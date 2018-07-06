@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/ll_profile">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imv_avatar"
+        android:src="@drawable/user_avatar"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:civ_border_color="@color/gray"
+        android:layout_marginTop="64dp"/>
+
+    <TextView
+        android:id="@+id/txv_profile_name"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/user_name"
+        android:textSize="18sp"
+        android:textColor="#7d7d7d"
+        android:layout_marginTop="32dp"
+        />
+
+    <Button
+        android:id="@+id/btn_card"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:text="@string/card"
+        android:textColor="@color/pink"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@color/pink"
+        android:text="@string/exit"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

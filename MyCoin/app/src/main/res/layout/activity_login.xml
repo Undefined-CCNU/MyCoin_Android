@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/purple"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logo_top" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/line_top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/triangle"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center_horizontal">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_login_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/edit_name"
+            app:met_baseColor="@color/purple"
+            app:met_errorColor="@color/pink"
+            app:met_iconLeft="@drawable/ic_name"
+            app:met_iconPadding="0dp"
+            app:met_primaryColor="@color/purple"
+            android:textCursorDrawable="@color/purple"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_login_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_login_name"
+            android:hint="@string/edit_password"
+            app:met_baseColor="@color/purple"
+            app:met_errorColor="@color/pink"
+            app:met_iconLeft="@drawable/ic_password"
+            app:met_iconPadding="0dp"
+            app:met_primaryColor="@color/purple"
+            android:textCursorDrawable="@color/purple"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_login_password"
+            android:layout_marginTop="32dp"
+            android:background="@color/purple"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txv_go_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/btn_login"
+            android:layout_alignRight="@id/btn_login"
+            android:layout_below="@id/btn_login"
+            android:layout_marginTop="16dp"
+            android:text="@string/go_to_register"
+            android:textColor="@color/pink" />
+
+    </RelativeLayout>
+
+</LinearLayout>

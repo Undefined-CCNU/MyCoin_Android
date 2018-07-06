@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">MyCoin</string>
+    <string name="title_data">明细</string>
+    <string name="title_write">记账</string>
+    <string name="title_profile">个人中心</string>
+    <string name="user_name">GiveMeMoney</string>
+
+    <string name="edit_name">请输入用户名</string>
+    <string name="edit_password">请输入密码</string>
+    <string name="edit_email">请输入邮箱</string>
+    <string name="edit_code">验证码</string>
+    <string name="edit_stu_no">请输入学号</string>
+    <string name="code">获取验证码</string>
+    <string name="date">请选择日期</string>
+    <string name="start">开始时间</string>
+    <string name="end">结束时间</string>
+    <string name="user_existed">已有账号，去登录 ></string>
+    <string name="go_to_register">快速注册 ></string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="exit">退出登录</string>
+    <string name="card">我的学生卡</string>
+    <string name="select">查询</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="register_successfully">注册成功</string>
+    <string name="login_successfully">登录成功</string>
+    <string name="input_again">重新输入</string>
+    <string name="username_existed">用户名已存在</string>
+    <string name="email_existed">邮箱已注册</string>
+    <string name="tip_please_input_4_20_name">请输入4—20位用户名</string>
+    <string name="tip_please_input_6_32_password">请输入6-32位密码</string>
+    <string name="email_error">邮箱格式错误</string>
+    <string name="login_error">登录失败，您的账号和密码无法匹配</string>
+    <string name="check_connection">请检查网络设置</string>
+    <string name="go_to_check">前去检查</string>
+    <string name="choose">选择</string>
+    <string name="done">done</string>
+    <string name="next">下一张</string>
+    <string name="save_failed_local">保存失败</string>
+    <string name="save_successfully_local">保存成功</string>
+    <string name="delete_failed_local">删除失败</string>
+    <string name="delete_successfully_local">删除成功</string>
+    <string name="update_failed_local">更新失败</string>
+    <string name="update_successfully_local">更新成功</string>
+
+    <string name="budget">当月预算</string>
+    <string name="cost">当月支出</string>
+    <string name="report">消费报表</string>
+    <string name="lately">最近七天</string>
+    <string name="monthly">月末账单</string>
+    <string name="budget2">当月预算:</string>
+    <string name="cost2">当月支出:</string>
+    <string name="report2">报表</string>
+    <string name="cost_short">支出</string>
+
+    <string name="last">last </string>
+
+    <string name="check">check</string>
+
+    <string name="number0">0</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
+    <string name="number3">3</string>
+    <string name="number4">4</string>
+    <string name="number5">5</string>
+    <string name="number6">6</string>
+    <string name="number7">7</string>
+    <string name="number8">8</string>
+    <string name="number9">9</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="point">.</string>
+    <string name="BackToZero">清零</string>
+    <string name="click_to_ensure">✓</string>
+
+    <string name="tag_eat">饮食</string>
+    <string name="tag_hung">出行</string>
+    <string name="tag_cloth">服装</string>
+    <string name="tag_play">娱乐</string>
+    <string name="tag_education">教育</string>
+    <string name="tag_general">一般</string>
+
+</resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自定义键盘，尚未用到 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/pink">
+        <Button
+            android:id="@+id/number1"
+            android:text="@string/number1"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/number2"
+            android:text="@string/number2"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/number3"
+            android:text="@string/number3"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/add"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/pink">
+        <Button
+            android:id="@+id/number4"
+            android:text="@string/number4"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/number5"
+            android:text="@string/number5"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/number6"
+            android:text="@string/number6"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/sub"
+            android:text="@string/sub"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/number7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:text="@string/number7"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/number8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:text="@string/number8"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/number9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:text="@string/number9"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/click_to_ensure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:text="@string/click_to_ensure"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/pink">
+        <Button
+            android:id="@+id/back_to_zero"
+            android:text="@string/BackToZero"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/number0"
+            android:text="@string/number0"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <Button
+            android:id="@+id/point"
+            android:text="@string/point"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            />
+        <TextView
+            android:text="     (๑°⌓°๑)"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</LinearLayout>

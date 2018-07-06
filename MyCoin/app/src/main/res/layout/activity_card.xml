@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_card"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_card_back"
+            android:src="@drawable/ic_keyboard_arrow_left_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="?android:attr/selectableItemBackground"
+            />
+
+        <TextView
+            android:text="@string/card"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_stu_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/toolbar_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:hint="@string/edit_stu_no"
+        android:lines="1"
+        app:met_baseColor="@color/purple"
+        app:met_errorColor="@color/pink"
+        app:met_primaryColor="@color/purple"
+        android:textCursorDrawable="@color/purple"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_stu_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edt_stu_no"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:hint="@string/edit_password"
+        android:lines="1"
+        app:met_baseColor="@color/purple"
+        app:met_errorColor="@color/pink"
+        app:met_primaryColor="@color/purple"
+        android:textCursorDrawable="@color/purple"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edt_stu_pwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false"
+        android:hint="@string/date"
+        android:lines="1"
+        app:met_baseColor="@color/purple"
+        app:met_errorColor="@color/pink"
+        app:met_iconRight="@drawable/ic_keyboard_arrow_right_white_24dp"
+        app:met_primaryColor="@color/purple" />
+
+    <!--
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edt_stu_pwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false"
+        android:hint="@string/start"
+        android:lines="1"
+        app:met_baseColor="@color/purple"
+        app:met_errorColor="@color/pink"
+        app:met_iconRight="@drawable/ic_keyboard_arrow_right_white_24dp"
+        app:met_primaryColor="@color/purple" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/edt_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false"
+        android:hint="@string/end"
+        android:lines="1"
+        app:met_baseColor="@color/purple"
+        app:met_errorColor="@color/pink"
+        app:met_iconRight="@drawable/ic_keyboard_arrow_right_white_24dp"
+        app:met_primaryColor="@color/purple" />
+        -->
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_below="@id/edt_date"
+        android:layout_centerHorizontal="true"
+        android:background="@color/pink"
+        android:text="@string/select"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar"
+        android:background="@color/transBg"
+        android:translationZ="1dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:background="@color/purple"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txv_date"
+                tools:text="2018年7月6日"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+        </RelativeLayout>
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendar"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="@color/purple"
+            android:background="@color/white"
+            />
+
+        <RelativeLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btn_date_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:layout_marginStart="170dp"
+                android:background="@color/white"
+                android:text="@string/cancel"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_date_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/btn_date_cancel"
+                android:layout_toRightOf="@+id/btn_date_cancel"
+                android:background="@color/white"
+                android:text="@string/confirm"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                style="?android:attr/borderlessButtonStyle"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wv_card"
+        android:translationZ="4dp"
+        android:layout_below="@+id/toolbar_card"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>
