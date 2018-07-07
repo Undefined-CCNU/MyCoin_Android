@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#ffffff"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_report"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
         android:background="@color/purple"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
 
         <ImageButton
             android:id="@+id/btn_back"
@@ -19,16 +18,15 @@
             android:background="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            />
+            android:layout_gravity="left"/>
         <TextView
             android:text="@string/report"
             android:textColor="#ffffff"
             android:textSize="24sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
+
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
@@ -48,32 +46,30 @@
 
             <Button
                 android:id="@+id/btn_lately"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/lately"
                 android:textSize="20sp"
                 android:textColor="@color/purple"
-                android:background="#ffffff"/>
+                android:background="#ffffff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
 
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="24dp"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center"/>
 
             <Button
                 android:id="@+id/btn_monthly"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/monthly"
                 android:textSize="20sp"
-                android:background="#ffffff"/>
+                android:background="#ffffff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
         </LinearLayout>
 
     </RelativeLayout>
-
-
 
 </LinearLayout>

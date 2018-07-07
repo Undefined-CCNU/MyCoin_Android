@@ -1,147 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ll_register">
 
     <LinearLayout
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:orientation="vertical"
         android:background="@color/purple"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
         <ImageView
-            android:layout_marginTop="48dp"
             android:src="@drawable/logo_top"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"/>
+
         <ImageView
-            android:layout_marginTop="16dp"
             android:src="@drawable/line_top"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
         <TextView
             android:text="@string/register"
-            android:layout_marginTop="16dp"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginTop="16dp"/>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
+                android:src="@drawable/triangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/triangle"
                 android:layout_alignParentBottom="true"/>
+
         </RelativeLayout>
+
     </LinearLayout>
 
     <RelativeLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:gravity="center_horizontal">
+        android:layout_weight="5">
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edt_register_name"
+            android:hint="@string/edit_name"
+            android:textCursorDrawable="@color/purple"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/edit_name"
             app:met_baseColor="@color/purple"
             app:met_errorColor="@color/pink"
-            app:met_iconLeft="@drawable/ic_name"
-            app:met_iconPadding="0dp"
             app:met_primaryColor="@color/purple"
-            android:textCursorDrawable="@color/purple"/>
+            app:met_iconLeft="@drawable/ic_name"
+            app:met_iconPadding="0dp"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edt_register_password"
+            android:hint="@string/edit_password"
+            android:textCursorDrawable="@color/purple"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_register_name"
-            android:hint="@string/edit_password"
             app:met_baseColor="@color/purple"
-            app:met_iconLeft="@drawable/ic_password"
-            app:met_iconPadding="0dp"
+            app:met_errorColor="@color/pink"
             app:met_primaryColor="@color/purple"
-            android:textCursorDrawable="@color/purple"/>
+            app:met_iconLeft="@drawable/ic_password"
+            app:met_iconPadding="0dp"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edt_register_email"
+            android:hint="@string/edit_email"
+            android:textCursorDrawable="@color/purple"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_register_password"
-            android:hint="@string/edit_email"
             app:met_baseColor="@color/purple"
-            app:met_iconLeft="@drawable/ic_email"
-            app:met_iconPadding="0dp"
+            app:met_errorColor="@color/pink"
             app:met_primaryColor="@color/purple"
-            android:textCursorDrawable="@color/purple"/>
+            app:met_iconLeft="@drawable/ic_email"
+            app:met_iconPadding="0dp"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edt_register_code"
+            android:hint="@string/edit_code"
+            android:textCursorDrawable="@color/purple"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_register_email"
-            android:hint="@string/edit_code"
             app:met_baseColor="@color/purple"
-            app:met_iconLeft="@drawable/ic_code"
-            app:met_iconPadding="0dp"
+            app:met_errorColor="@color/pink"
             app:met_primaryColor="@color/purple"
-            android:textCursorDrawable="@color/purple"/>
+            app:met_iconLeft="@drawable/ic_code"
+            app:met_iconPadding="0dp"/>
 
         <Button
             android:id="@+id/btn_code"
-            android:layout_width="96dp"
-            android:layout_height="36dp"
-            android:layout_below="@+id/edt_register_email"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_toRightOf="@+id/edt_register_code"
-            android:layout_toEndOf="@+id/edt_register_code"
-            android:layout_alignEnd="@+id/edt_register_email"
-            android:layout_alignRight="@+id/edt_register_email"
-            android:background="@color/purple"
             android:text="@string/code"
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textAlignment="center"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
+            android:background="@color/purple"
             android:translationZ="1dp"
             android:elevation="1dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_below="@+id/edt_register_email"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignEnd="@+id/edt_register_email"
+            android:layout_alignRight="@+id/edt_register_email"
+            android:layout_toRightOf="@+id/edt_register_code"
+            android:layout_toEndOf="@+id/edt_register_code"
             style="?android:attr/borderlessButtonStyle"/>
 
         <Button
             android:id="@+id/btn_register"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@color/purple"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_register_code"
-            android:layout_marginTop="32dp"
-            android:background="@color/purple"
-            android:text="@string/register"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:layout_marginTop="32dp"/>
 
         <TextView
             android:id="@+id/txv_go_to_login"
+            android:text="@string/user_existed"
+            android:textColor="@color/pink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/btn_register"
-            android:layout_alignRight="@id/btn_register"
             android:layout_below="@id/btn_register"
             android:layout_marginTop="16dp"
-            android:text="@string/user_existed"
-            android:textColor="@color/pink" />
+            android:layout_alignEnd="@id/btn_register"
+            android:layout_alignRight="@id/btn_register"/>
 
     </RelativeLayout>
 

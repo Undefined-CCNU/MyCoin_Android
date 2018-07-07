@@ -1,19 +1,18 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/write_fragment">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_cost"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
         android:background="@color/purple"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
 
         <ImageButton
             android:id="@+id/btn_clear_cost"
@@ -21,17 +20,15 @@
             android:background="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            />
+            android:layout_gravity="left" />
 
         <TextView
             android:text="@string/cost_short"
             android:textColor="#ffffff"
             android:textSize="24sp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_gravity="center"/>
 
         <ImageButton
             android:id="@+id/btn_done_cost"
@@ -39,62 +36,60 @@
             android:background="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            />
+            android:layout_gravity="right"/>
+
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/ll_input"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal">
+        android:layout_height="64dp">
 
         <ImageView
             android:id="@+id/imv_tag"
+            android:src="@drawable/ic_eat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_eat" />
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"/>
 
         <TextView
             android:id="@+id/txv_tag"
+            android:text="@string/tag_eat"
+            android:textColor="@color/ic_eat"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:text="@string/tag_eat"
-            android:textColor="@color/ic_eat"
-            android:textSize="16sp" />
+            android:layout_marginStart="8dp"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edt_money"
+            android:gravity="center"
+            android:inputType="number"
+            android:textCursorDrawable="@color/purple"
             android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:gravity="center"
+            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             app:met_baseColor="@color/purple"
             app:met_primaryColor="@color/purple"
-            android:inputType="number"
-            android:textCursorDrawable="@color/purple"
-            app:met_underlineColor="@color/purple"
-            />
+            app:met_underlineColor="@color/purple"/>
 
     </LinearLayout>
 
     <View
-        android:layout_marginTop="8dp"
+        android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/gray"
-        />
+        android:layout_marginTop="8dp"/>
 
     <LinearLayout
         android:id="@+id/llTag1"
@@ -104,18 +99,18 @@
         android:layout_marginTop="32dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_eat"
                 android:src="@drawable/ic_eat"
                 android:background="#fafafa"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:text="@string/tag_eat"
@@ -123,21 +118,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
+
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_hung"
                 android:src="@drawable/ic_hung"
                 android:background="#fafafa"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:text="@string/tag_hung"
@@ -145,21 +141,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
+
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_cloth"
                 android:src="@drawable/ic_cloth"
                 android:background="#fafafa"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:text="@string/tag_cloth"
@@ -167,8 +164,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
-        </LinearLayout>
 
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -180,11 +177,11 @@
         android:layout_marginTop="32dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_play"
@@ -199,14 +196,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
+
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_education"
@@ -221,14 +219,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
+
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/btn_general"
@@ -243,7 +242,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"/>
+
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
