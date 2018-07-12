@@ -1,6 +1,9 @@
 package com.mycoin.ui;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +19,6 @@ import com.mycoin.data.InterfaceAdapter;
 import com.mycoin.data.Login;
 import com.mycoin.data.LoginUser;
 import com.mycoin.util.ConnectionUtils;
-import com.mycoin.util.ToastUtils;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.Calendar;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String mUserName;
     private String mUserPassword;
+    private String mUserToken;
 
     HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
     Retrofit retrofit;
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initView();
         initNet();
+        checkLogin();
     }
 
     private void initView() {
@@ -81,6 +85,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         interfaceAdapter = retrofit.create(InterfaceAdapter.class);
     }
 
+    private void checkLogin() {
+            SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Activity.MODE_PRIVATE);
+            mUserName = sharedPreferences.getString("username", "");
+            mUserPassword = sharedPreferences.getString("password", "");
+            mUserToken = sharedPreferences.getString("token", "");
+            if (mUserName != "" && mUserPassword != "") {
+                Application.storedUsername = mUserName;
+                Application.storedUserPassword = mUserPassword;
+                Application.storedUserToken = mUserToken;
+                Intent intent = new Intent(MainActivity.this, CoinMainActivity.class);
+                startActivity(intent);
+                // login();
+            }
+    }
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -94,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mUserPassword = mEdtLoginPassword.getText().toString();
                 ConnectionUtils.makeSnackBar(mLlLogin, getApplicationContext());
                 Application.storedUsername = mUserName;
+                Application.storedUserPassword = mUserPassword;
                 login();
                 break;
         }
@@ -107,14 +128,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onResponse(Call<Login> call, Response<Login> response) {
                 Login bean = response.body();
                 if (response.code() == 200) {
-                    try {
-                        Application.storedUserToken = bean.getToken();
-                    }catch(Exception e){
-                        e.printStackTrace();
-                    }
-                    ToastUtils.showShort(MainActivity.this, R.string.login_successfully);
+                    Application.storedUserToken = bean.getToken();
+                    storeMessage();
                     Intent intent = new Intent(MainActivity.this, CoinMainActivity.class);
                     startActivity(intent);
+                    // try {
+                    //     Application.storedUserToken = bean.getToken();
+                    // } catch(Exception e) {
+                    //     e.printStackTrace();
+                    // }
+                    // ToastUtils.showShort(MainActivity.this, R.string.login_successfully);
                 } else if (response.code() == 401) {
                     Snackbar.make(mLlLogin, R.string.login_error, Snackbar.LENGTH_INDEFINITE)
                             .setAction(R.string.input_again, new View.OnClickListener() {
@@ -139,7 +162,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 t.printStackTrace();
             }
         });
+    }
 
+    private void storeMessage() {
+        SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("username", Application.storedUsername);
+        editor.putString("password", Application.storedUserPassword);
+        editor.putString("token", Application.storedUserToken);
+        editor.commit();
     }
 
     @Override

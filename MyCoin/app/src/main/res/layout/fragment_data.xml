@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/data_fragment">
+    android:id="@+id/data_fragment"
+    android:background="@color/bg">
 
     <LinearLayout
         android:id="@+id/ll_top"

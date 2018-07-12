@@ -1,6 +1,8 @@
 package com.mycoin.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -122,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
             case R.id.btn_register:
                 mUserCode = mEdtRegisterCode.getText().toString();
                 register();
+                storeMessage();
 
                 // ConnectionUtils.makeSnackBar(mLlRegister, getApplicationContext());
                 // if (mUserName.length() >= 4 && mUserName.length() < 20) {
@@ -188,6 +191,7 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
                 Check bean = response.body();
                 if (response.code() == 200) {
                     Application.storedUsername = mUserName;
+                    Application.storedUserPassword = mUserPassword;
                     ToastUtils.showShort(RegisterActivity.this, R.string.register_successfully);
                     Intent intent = new Intent(RegisterActivity.this, CoinMainActivity.class);
                     startActivity(intent);
@@ -202,6 +206,17 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
             }
         });
     }
+
+    private void storeMessage() {
+        if (Application.storedUsername != "" && Application.storedUserPassword != "") {
+            SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("username", Application.storedUsername);
+            editor.putString("password", Application.storedUserPassword);
+            editor.commit();
+        }
+    }
+
 
     // 邮箱匹配
     private boolean isEmail(String email) {

@@ -1,6 +1,8 @@
 package com.mycoin.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -32,6 +34,7 @@ public class ProfileFragment extends Fragment {
     private Button mBtnCard;
     private Button mBtnExit;
     private AlertDialog mAlertDialog;
+    private String mImageUri;
 
     HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
     Retrofit retrofit;
@@ -53,6 +56,7 @@ public class ProfileFragment extends Fragment {
         mBtnCard = (Button) view.findViewById(R.id.btn_card);
         mBtnExit = (Button) view.findViewById(R.id.btn_exit);
 
+        /*
         mImvAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +72,7 @@ public class ProfileFragment extends Fragment {
                 mTxvCamera.setOnClickListener(new OnAlertClickListener());
             }
         });
+        */
 
         mBtnCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,9 +87,10 @@ public class ProfileFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 Application.storedUsername = "";
+                Application.storedUserPassword = "";
                 Application.storedUserToken = "";
                 Application.storedUserBudget = 0;
-
+                cleanMessage();
             }
         });
 
@@ -136,6 +142,16 @@ public class ProfileFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
+    private void cleanMessage() {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("username", "");
+        editor.putString("password", "");
+        editor.putString("token", "");
+        editor.commit();
+    }
+
+    /*
     private class OnAlertClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
@@ -154,5 +170,6 @@ public class ProfileFragment extends Fragment {
             }
         }
     }
+    */
 }
 

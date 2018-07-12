@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:id="@+id/ll_profile">
+    android:id="@+id/ll_profile"
+    android:background="@color/bg">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imv_avatar"

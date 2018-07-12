@@ -12,6 +12,7 @@
     <color name="purple">#a1b7ec</color>
     <color name="gray">#cdcdcd</color>
     <color name="transBg">#88000000</color>
+    <color name="bg">#fafafa</color>
 
     <color name="bg_swipe_item_neutral">#ffffffff</color>
 

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/write_fragment">
+    android:id="@+id/write_fragment"
+    android:background="@color/bg">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_cost"

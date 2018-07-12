@@ -174,7 +174,7 @@ public class WriteFragment extends Fragment implements View.OnClickListener {
         } else if (flag.equals("一般")) {
             accountingUser = new AccountingUser(0, 0, 0, money, 0, 0, month, day);
         } else if (flag.equals("服装")) {
-            accountingUser = new AccountingUser(0, 0, 0, 0, 0, 0, month, day);
+            accountingUser = new AccountingUser(0, 0, 0, 0, money, 0, month, day);
         } else if (flag.equals("娱乐")) {
             accountingUser = new AccountingUser(0, 0, 0, 0, 0, money, month, day);
         }
