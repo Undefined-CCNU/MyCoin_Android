@@ -162,12 +162,12 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
                 Check bean = response.body();
                 if (response.code() == 200) {
                     // "msg": "已发送邮件！"
-                    ToastUtils.showShort(RegisterActivity.this, "已发送邮件！");
+                    ToastUtils.showShort(RegisterActivity.this, R.string.email_sended);
                     // ToastUtils.showShort(RegisterActivity.this, bean.getMsg());
                 } else if (response.code() == 403) {
                     // "msg": "邮箱已被注册！"
                     // "msg": "用户名已被注册！"
-                    ToastUtils.showShort(RegisterActivity.this, "用户名或邮箱已被注册！");
+                    ToastUtils.showShort(RegisterActivity.this, R.string.username_or_email_existed);
                     // if (bean != null) {
                     //     ToastUtils.showShort(RegisterActivity.this, bean.getMsg());
                     // }
@@ -242,8 +242,7 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
         public void onFinish() {
             mBtnCode.setClickable(true);
             mBtnCode.setBackgroundColor(getResources().getColor(R.color.purple));
-            mBtnCode.setText("重新获取");
-
+            mBtnCode.setText(R.string.get_again);
         }
     }
 

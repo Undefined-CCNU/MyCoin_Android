@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/txv_profile_name"
-        tools:text="@string/user_name"
+        tools:text="MyCoin"
         android:textSize="18sp"
         android:textColor="#7d7d7d"
         android:gravity="center_horizontal"

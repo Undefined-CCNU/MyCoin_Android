@@ -184,7 +184,7 @@ public class WriteFragment extends Fragment implements View.OnClickListener {
             public void onResponse(Call<Accounting> call, Response<Accounting> response) {
                 Accounting bean = response.body();
                 if (response.code() == 200) {
-                    ToastUtils.showShort(getContext(), "记录成功");
+                    ToastUtils.showShort(getContext(), R.string.save_successfully_local);
                 }
             }
 
