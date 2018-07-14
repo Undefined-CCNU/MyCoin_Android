@@ -34,7 +34,6 @@ import com.mycoin.util.ToastUtils;
 import com.qiniu.android.http.ResponseInfo;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -95,12 +94,13 @@ public class ProfileFragment extends Fragment {
         initNet();
         requestPermission();
 
-        if (Application.storedUserAvatarUrl != "") {
-            Picasso.get().load(Application.storedUserAvatarUrl).into(mImvAvatar);
-        } else {
-            mImvAvatar.setImageResource(R.drawable.user_avatar);
-            // Picasso.get().load("http://ohr9krjig.bkt.clouddn.com/user_avatar.png").into(mImvAvatar);
-        }
+        // if (Application.storedUserAvatarUrl != "") {
+        //     Picasso.get().load(Application.storedUserAvatarUrl).into(mImvAvatar);
+        // } else {
+        //     mImvAvatar.setImageResource(R.drawable.user_avatar);
+        //     // Picasso.get().load("http://ohr9krjig.bkt.clouddn.com/user_avatar.png").into(mImvAvatar);
+        // }
+        mImvAvatar.setImageResource(R.drawable.user_avatar);
         mImvAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
