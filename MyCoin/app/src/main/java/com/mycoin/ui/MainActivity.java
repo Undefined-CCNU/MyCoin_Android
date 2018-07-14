@@ -87,18 +87,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void checkLogin() {
-            SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Activity.MODE_PRIVATE);
-            mUserName = sharedPreferences.getString("username", "");
-            mUserPassword = sharedPreferences.getString("password", "");
-            mUserToken = sharedPreferences.getString("token", "");
-            if (mUserName != "" && mUserPassword != "") {
-                Application.storedUsername = mUserName;
-                Application.storedUserPassword = mUserPassword;
-                Application.storedUserToken = mUserToken;
-                Intent intent = new Intent(MainActivity.this, CoinMainActivity.class);
-                startActivity(intent);
-                // login();
-            }
+        SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Activity.MODE_PRIVATE);
+        mUserName = sharedPreferences.getString("username", "");
+        mUserPassword = sharedPreferences.getString("password", "");
+        mUserToken = sharedPreferences.getString("token", "");
+        if (mUserName != "" && mUserPassword != "") {
+            Application.storedUsername = mUserName;
+            Application.storedUserPassword = mUserPassword;
+            Application.storedUserToken = mUserToken;
+            Intent intent = new Intent(MainActivity.this, CoinMainActivity.class);
+            startActivity(intent);
+            // login();
+        }
     }
 
 

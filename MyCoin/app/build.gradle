@@ -19,6 +19,7 @@ android {
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -35,6 +36,9 @@ dependencies {
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.+'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 

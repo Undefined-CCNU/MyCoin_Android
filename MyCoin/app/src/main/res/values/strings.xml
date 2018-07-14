@@ -78,5 +78,8 @@
     <string name="choose_avatar">选择头像</string>
     <string name="album">相册</string>
     <string name="camera">拍照</string>
+    <string name="path_error">头像路径错误</string>
+    <string name="time_out">上传超时</string>
+    <string name="upload_successfully">头像上传成功</string>
 
 </resources>

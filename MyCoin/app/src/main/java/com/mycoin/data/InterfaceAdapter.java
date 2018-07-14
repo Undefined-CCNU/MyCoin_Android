@@ -5,6 +5,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface InterfaceAdapter {
@@ -44,5 +45,8 @@ public interface InterfaceAdapter {
     // 添加账单
     @POST("api/add_account/")
     Call<Accounting> getAccounting(@Body AccountingUser accountingUser, @Header("token")String token);
+
+    @PUT("api/profile/")
+    Call<Avatar> getAvatar(@Body Avatar avatar, @Header("token")String token);
 
 }

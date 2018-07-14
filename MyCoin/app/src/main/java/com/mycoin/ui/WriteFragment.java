@@ -105,11 +105,14 @@ public class WriteFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btn_clear_cost :
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.data_fragment, new DataFragment(), null)
-                        .addToBackStack(null)
-                        .commit();
+                Intent intent = new Intent(getContext(), CoinMainActivity.class);
+                intent.putExtra("id", 2);
+                startActivity(intent);
+                // getActivity().getSupportFragmentManager()
+                //         .beginTransaction()
+                //         .replace(R.id.data_fragment, new DataFragment(), null)
+                //         .addToBackStack(null)
+                //         .commit();
                 break;
             case R.id.btn_hung :
                 mImvTag.setImageResource(R.drawable.ic_hung);
@@ -143,9 +146,9 @@ public class WriteFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.btn_done_cost :
                 write();
-                Intent intent = new Intent(getContext(), CoinMainActivity.class);
-                intent.putExtra("id", 2);
-                startActivity(intent);
+                Intent intent1 = new Intent(getContext(), CoinMainActivity.class);
+                intent1.putExtra("id", 2);
+                startActivity(intent1);
                 //getActivity().getSupportFragmentManager()
                 //        .beginTransaction()
                 //        .replace(R.id.data_fragment, new DataFragment(), null)
